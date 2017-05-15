@@ -15,21 +15,34 @@ var alphabet= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 // 	}
 // }
 
+	//     function guess(input) {
+	// //	var key= 9; //key press saved as a string
+	// 		for (var i=0; i<words.length; i++) {
+	// 			for (var j=0; j < words[i].length; j++) {
+	// 				var place = words[i].charAt(j);
+	// 				if (place === input) {
+	// 					console.log(place);
+	// 				};
 
-document.onkeypress = function (e) {
-    e = e || window.event;
-    // use e.keyCode
-    console.log(e);
 
-    guess function(key) {
-	var key= //key press saved as a string
-	for (var i=0; i<words.length; i++) {
-		for (var j=0; j<words[i].length; j++) {
-			var place=words[i].charAt(j);
-			console.log(place);
+	// 			}
+	// 	}
+
+
+document.onkeyup = function (e) {
+    var key = e.key    
+	//key press saved as a string
+		for (var i=0; i<words.length; i++) {
+			for (var j=0; j < words[i].length; j++) {
+				var place = words[i].charAt(j);
+				if (place === key) {
+					console.log(place);
+				};
+
+
+			}
+		
 		}
-	}
-}
-
-
 };
+
+

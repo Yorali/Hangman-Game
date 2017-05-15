@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首吊りゲーム</title>
+	<style type="text/css" src="assets/css/reset.css"></style>
+	<style type="text/css" src="assets/css/style.css"></style>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1 class="title">首吊りゲーム</h1>
+		</div>
+
+		<div class="content">
+			<div class="dead">
+				<!-- Put dead person here -->
+			</div>
+			<!-- Set parallel vertically to 'dead' -->
+			<div class="guess">
+				<!-- Instructions, Wins, Current word, Guesses remaining, Letters guessed -->
+				<div class="instructions">
+					<p>チャンスが尽くす前に言葉を推量してください。Guess the word before running out of guesses.</p>
+				</div>
+
+				<br>
+
+				<div class="wins">
+				<!-- JS: variables that count up -->
+					<p class='win'>
+						勝ち:_00_
+					</p>
+					<p class='win'>
+						Wins:_00_
+					</p>
+				</div>
+
+				<br>
+
+				<div class="currentWord">
+					<p class='crtword'>
+					<!-- JS: make an array with nested arrays that carry the word in question -->
+						_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+					</p>
+				</div>
+
+				<br>
+
+				<div class="guessRemain">
+					<p class="guessrem">
+					<!-- JS: variable that counts down -->
+						Guesses Remaining:______
+					</p>
+				</div>
+
+				<br>
+
+				<div class="lettersGuess">
+				<!-- JS: Make an array that is pushed into everytime a new key is pressed that is an alphabetic number -->
+					Guessed Letters:______
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>

@@ -31,7 +31,43 @@ function blank() {
 }
 
 
+//Check if user guess exists in current word
+document.onkeyup = function (e) {
+    var key = e.key; 
+	for (var i = 0; i < decision.length; i++) {
+		if (decision[i] === key) {
+ 			empty[i] = (key + " ");
+ 			var find = true;
+		}
+	}
 
+	if(!find) {
+		var lettersGuess = document.getElementsByClassName('lettersGuess');
+		var place = document.createTextNode(" " + key);
+		lettersGuess.appendChild(place);
+		loss--;
+
+	}
+	// Letters found entirely??
+	var complete = true;
+	// Iterate through to find 
+	for (var i = 0; i < empty.length; i++) {
+		if (empty[i] === "_ ") {
+			complete = false;
+		}
+	}
+	if (complete) {
+		window.alert("死亡避けたんだな / You have avoided death");
+	}
+
+	if (loss === 0) {
+		window.alert("死亡した。今から葬式だよ。 / You have die, your funeral starts now")
+	}
+
+}
+
+
+	
 // guess function(key) {
 // 	var key= //key press saved as a string
 // 	for (var i=0; i<words.length; i++) {
@@ -56,20 +92,20 @@ function blank() {
 	// 	}
 
 
-document.onkeyup = function (e) {
-    var key = e.key    
-	//key press saved as a string
-		for (var i=0; i<words.length; i++) {
-			for (var j=0; j < words[i].length; j++) {
-				var place = words[i].charAt(j);
-				if (place === key) {
-					console.log(place);
-				};
+// document.onkeyup = function (e) {
+//     var key = e.key    
+// 	//key press saved as a string
+// 		for (var i=0; i<words.length; i++) {
+// 			for (var j=0; j < words[i].length; j++) {
+// 				var place = words[i].charAt(j);
+// 				if (place === key) {
+// 					console.log(place);
+// 				};
 
 
-			}
+// 			}
 		
-		}
-};
+// 		}
+// };
 
 
